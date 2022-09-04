@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+        <title>My Website</title>
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "icon" href = "cute.jpg" type = "image/x-icon">
+        <script src = "quiz.js" defer></script>
+    </head>
+    <body>
+        <div class = "game-container">
+            <div class = "word">
+                <div id = "word"></div>
+                <div>:</div>
+            </div>
+            <input class = "answer" type = "text" name = "answer">
+            <div class = "skip" style = "visibility: hidden;">
+                <button onclick = "skipWord()">
+                    <span>Skip</span>
+                </button>
+            </div>
+        </div>
+        <div class = "score" style = "display: none;">
+        </div>
+    </body>
+</html>

@@ -1,14 +1,29 @@
 const themesWordsAnswers = {"set1" : {
-    "chat" : "cat",
-    "chien" : "dog",
+    "une maladie" : "a disease",
+    "souffrir d'une maladie" : "to suffer from a disease",
+    "mourir d'une maladie" : "to die of disease",
+    "une maladie grave" : "a serious disease",
+    "être dans un état critique" : "to be critically ill",
+    "un microbe (ou un germ)" : "a germ",
+    "des bactéries" : "bacteria",
+    "attraper la grippe" : "to go down with the flu",
+    "un danger pour la santé" : "a health hazard",
+    "un fléau" : "a curse",
+    "le cancer du poumon" : "lung",
+    "le cancer du sein" : "breast",
+    "le cancer de la peau" : "skin cancer",
+    "cancérigène" : "carcinogenic",
+    "le diabète" : "diabetes",
+    "l'hépatite" : "hepatitis",
+    "la malaria (ou le paludisme)" : "malaria",
+    "une maladie sexuellement transmissible" : "a sexually transmitted disease",
+    "une maladie vénérienne" : "a venereal disease",
+    "avoir une maladie cardiaque" : "to have a heart condition",
+    "la maladie d'Alzheimer / de Parkison" : "Alzeihemer's / Parkinson's disease",
+    "une maladie neurodégénérative" : "a neurodegenerative disease",
     "tasse" : "cup",
-},
-"set2" : {
-    "maison" : "house",
-    "je" : "I",
-    "parler" : "to speak"
 }}
-const themes = ["set1", "set2"]; //à remplacer par un getElementById
+const themes = ["set1"]; //à remplacer par un getElementById
 const score = {}
 const wordsAndAnswers = [];
 for (let theme of themes) {
@@ -21,6 +36,8 @@ wordsAndAnswers.sort(()=> Math.random() - 0.5);
 const wordDisplayed = document.getElementById("word");
 let wordRank = 0
 wordDisplayed.innerText = wordsAndAnswers[wordRank][0];
+const rankDisplayed = document.getElementsByClassName("rank")[0];
+rankDisplayed.innerText = "1/" + wordsAndAnswers.length
 
 const scorePanel = document.getElementsByClassName("score")[0];
 const gameContainer = document.getElementsByClassName("game-container")[0];
@@ -59,6 +76,7 @@ async function checkAnswer(e) {
             score[wordsAndAnswers[wordRank][0]] = [wordsAndAnswers[wordRank][1], userAnswer];
             if (wordsAndAnswers.length > wordRank + 1) {
                 wordRank++;
+                rankDisplayed.innerHTML = wordRank + 1 + "/" + wordsAndAnswers.length;
                 document.getElementById("word").innerText = wordsAndAnswers[wordRank][0];
                 input.classList.remove("correct");
                 input.disabled = false;
@@ -90,7 +108,6 @@ async function checkAnswer(e) {
             input.classList.add("wrong");
             wrongSFX.play();
             await new Promise(r => setTimeout(r, 1000));
-            score[wordsAndAnswers[wordRank][0]] = false;
             input.classList.remove("wrong");
             input.disabled = false;
             input.focus();
@@ -100,7 +117,6 @@ async function checkAnswer(e) {
 
 async function skipWord() {
     const input = document.getElementsByClassName("answer")[0];
-    const userAnswer = input.value;
     input.value = "";
     input.disabled = true;
     wrongSFX.play();
@@ -113,16 +129,16 @@ async function skipWord() {
     if (skipButton.style.visibility !== "hidden") {
         skipButton.style.visibility = "hidden";
     }
-    score[wordsAndAnswers[wordRank][0]] = false;
     if (wordsAndAnswers.length > wordRank + 1) {
-        score[wordsAndAnswers[wordRank][0]] = false;
         wordRank++;
+        rankDisplayed.innerHTML = wordRank + 1 + "/" + wordsAndAnswers.length;
         document.getElementById("word").innerText = wordsAndAnswers[wordRank][0];
         input.classList.remove("wrong");
         input.disabled = false;
         input.focus();
     } else {
         gameContainer.style.display = "none";
+        gameScore();
     }
 }
 
@@ -134,7 +150,7 @@ function gameScore() {
         }
     }
     let note = document.createElement("h1");
-    note.innerHTML = point.toString() + "/" + (Object.keys(score).length).toString();
+    note.innerHTML = point + "/" + (Object.keys(score).length);
     let noteToMoveTo = scorePanel;
     noteToMoveTo.insertBefore(note, noteToMoveTo.children[0]);
     for (let i = 0; i < Object.keys(score).length; i++) {

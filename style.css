@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-weight: bold;
 }
 
 .word {
@@ -39,8 +40,8 @@ body {
     margin: 2px;
     border: 2px solid #55525c;
     background: #21232d;
-    font-weight: bold;
     color: #fff;
+    font-weight: bold;
     outline: none;
     z-index: 1;
     transition: all .5s;
@@ -169,4 +170,33 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid #55525c;
+    background: #21232d;
+    font-weight: bold;
+    outline: none;
+}
+
+p {
+    font-size: 40px;
+    padding: 10px 30px;
+    width: auto;
+    margin: 2px;
+}
+
+h1 {
+    font-size: 100px;
+    padding: 5px;
+    width: auto;
+    margin: 2px;
+}
+
+.rank {
+    position: absolute;
+    right: 0; 
+    bottom: 0;
+    font-size: 100px;
+    margin-right: 12px;
 }

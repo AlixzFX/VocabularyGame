@@ -27,12 +27,8 @@ body {
     margin: 8px;
 }
 
-#word {
-    padding-right: 10px;
-}
-
 .answer {
-    width: 360px;
+    width: 560px;
     font-size: 32px;
     padding: 10px;
     text-align: center;
@@ -95,7 +91,7 @@ body {
     text-align: center;
     font-size: 28px;
     padding: 14.5px;
-    width: 382px;
+    width: 582px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 2px;
@@ -166,6 +162,11 @@ body {
 }
 
 .score {
+    position: absolute;
+    top: 0; 
+}
+
+.results {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,6 +198,27 @@ h1 {
     position: absolute;
     right: 0; 
     bottom: 0;
-    font-size: 100px;
+    font-size: 50px;
     margin-right: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    .answer {
+        width: 360px;
+    }
+
+    .skip button{
+        width: 382px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .answer {
+        width: 160px;
+    }
+
+    .skip button{
+        width: 182px;
+    }
 }

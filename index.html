@@ -8,7 +8,6 @@
         <meta name = "description" content = "Révisez le vocabulaire anglais sous forme de quiz !">
         <meta name = "keyword" content = "quiz, quizz, anglais, vocabulaire, lycée, collège, prépa, fun">
         <link rel = "stylesheet" href = "style.css">
-        <link rel = "icon" href = "cute.jpg" type = "image/x-icon">
         <script src = "quiz.js" defer></script>
     </head>
     <body>
@@ -18,8 +17,8 @@
             </div>
             <input class = "answer" type = "text" name = "answer">
             <div class = "skip" style = "visibility: hidden;">
-                <button>
-                    <span>Skip</span>
+                <button class = "skipButton" onclick = "skipWord()">
+                    <span>Show answer</span>
                 </button>
             </div>
             <div class = "rank">

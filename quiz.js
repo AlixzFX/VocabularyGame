@@ -122,9 +122,7 @@ const resultsPanel = document.getElementsByClassName("results")[0];
 const scorePanel = document.getElementsByClassName("score")[0];
 const gameContainer = document.getElementsByClassName("game-container")[0];
 const skipButton = document.getElementsByClassName("skip")[0];
-skipButton.addEventListener("click", function() {
-    skipWord();
-});
+const skipButtonItself = document.getElementsByClassName("skipButton")[0];
 
 const correctSFX = new Audio("correct.wav")
 const wrongSFX = new Audio("wrong.wav")
@@ -196,8 +194,15 @@ async function checkAnswer(e) {
 }
 
 async function skipWord() {
+    skipButtonItself.disabled = true;
     const input = document.getElementsByClassName("answer")[0];
+    const answer = wordsAndAnswers[wordRank][1];
     input.value = "";
+    for (let i = 0; i < answer.length; i++) {
+        await new Promise(r => setTimeout(r, 100));
+        input.value += answer[i];
+    }
+    await new Promise(r => setTimeout(r, 1000));
     input.disabled = true;
     wrongSFX.play();
     if (skipButton.style.visibility !== "hidden") {
@@ -205,6 +210,7 @@ async function skipWord() {
         skipButton.classList.add("hideSkipButton");
     }
     input.classList.add("wrong");
+    input.value = "";
     await new Promise(r => setTimeout(r, 1000));
     if (skipButton.style.visibility !== "hidden") {
         skipButton.style.visibility = "hidden";
@@ -220,6 +226,7 @@ async function skipWord() {
         gameContainer.style.display = "none";
         gameScore();
     }
+    skipButtonItself.disabled = false;
 }
 
 function gameScore() {

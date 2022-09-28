@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #282a36;
+    height: 100vh;
+    color: #fff;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.home button{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #00ff26;
+    border: none;
+    box-shadow: 0 0 10px #27ff3d6a;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 14.5px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+  
+.redirect span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.redirect span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.redirect:hover span {
+    padding-right: 25px;
+}
+  
+.redirect:hover span:after {
+    opacity: 1;
+    right: 0;
+}

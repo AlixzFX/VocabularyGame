@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+        <title>Vocabulary Quiz</title>
+        <meta name = "description" content = "Révisez le vocabulaire anglais sous forme de quiz !">
+        <meta name = "keyword" content = "quiz, quizz, anglais, vocabulaire, lycée, collège, prépa, fun">
+        <link rel = "stylesheet" href = "quizImmigration.css">
+        <script src = "quizImmigration.html" defer></script>
+    </head>
+    <body>
+        <div class = "game-container">
+            <div class = "word">
+                <div id = "word"></div>
+            </div>
+            <input class = "answer" type = "text" name = "answer">
+            <div class = "skip" style = "visibility: hidden;">
+                <button class = "skipButton" onclick = "skipWord()">
+                    <span>Show answer</span>
+                </button>
+            </div>
+            <div class = "rank">
+                <p></p>
+            </div>
+        </div>
+        <div class = "score" style = "display: block;">
+            <div class = "results">
+            </div>
+        </div>
+    </body>
+</html>

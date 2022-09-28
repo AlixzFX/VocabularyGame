@@ -1,69 +1,68 @@
-const themesWordsAnswers = {
-    "Environnement" : {
-        "écologique, lié à l'environnement" : "environmental",
-        "une politique qui respecte l'environnement" : "an eco-friendly policy",
-        "protéger l'environnement" : "to protect the environnement",
-        "la protection de l'environnement" : "the preservation of the environment",
-        "la nature" : "nature",
-        "la protection de la nature" : "nature conservation",
-        "la faune et la flore" : "wildlife",
-        "un défenseur de l'environnement" : "a conservationist",
-        "un écologiste" : "an ecologist",
-        "un militant écologiste" : "a green activist",
-        "un écolo" : "a tree-hugger",
-        "un militan écologiste (mais l'autre version stylée)" : "an eco-warrior",
-        "sensibiliser les gens à un problème" : "to make people aware of a problem",
-        "une campagne de sensibilisation" : "an awareness campaign",
-        "un parc naturel" : "a natural reserve",
-        "le tourisme écologique" : "eco-tourism",
-        "détruire la biosphère" : "to destroy the biosphere",
-        "être / représenter une menace pour qch" : "to be / pose a threat to something",
-        "mettre en danger qch" : "to jeopardize something",
-        "mettre qch en danger" : "to put something at risk",
-        "être en danger" : "to be in danger",
-        "nuire à l'environnement" : "to harm the environnement",
-        "nocif" : "harmful",
-        "inoffensif" : "harmless",
-        "dégâts" : "damage",
-        "endommager qch" : "to damage something",
-        "causer des dégâts" : "to cause damage",
-        "se détériorer" : "to deteriorate",
-        "les ressources naturelles" : "natural resources",
-        "l'épuisement des ressources" : "the depletion of resources",
-        "la rareté" : "scarcity",
-        "les matières premières" : "raw materials",
-        "la biodiversité" : "biodiversity",
-        "l'habitat" : "habitat",
-        "une niche" : "a niche",
-        "une zone protégée" : "a conservation area",
-        "un écosystème" : "an ecosystem",
-        "une espèce" : "a species",
-        "une espèce animale" : "an animal species",
-        "une espèce végétale" : "a plant species",
-        "un mammifère" : "a mammal",
-        "le trafic d'animaux" : "animal trafficking",
-        "une espèce en voie de disparition" : "an endangered species",
-        "être menacé d'extinction" : "to be threatened with extinction",
-        "disparaître" : "to become extinct",
-        "la surpêche" : "overfishing",
-        "le thon rouge" : "bluefin tuna",
-        "un dauphin / une baleine" : "a dolphin / a whale",
-        "la pêche à la baleine" : "whaling",
-        "la couche d'ozone" : "the ozone layer",
-        "les rayons ultra-violets" : "ultra-violet rays",
-        "le trou dans la couche d'ozone" : "the hole the ozone layer",
-        "la diminution de la couche d'ozone" : "ozone depletion",
-        "les CFC" : "CFCs",
-        "respectueux de la couche d'ozone" : "ozone-friendly",
-        "une forêt tropicale" : "a tropical forest",
-        "le dévoloppement durable" : "sustainable development",
-        "abattre des arbres" : "to cut down trees",
-        "la déforestation" : "deforestation",
-        "l'exploitation du bois" : "logging",
-        "l'industrie du bois" : "the logging industry",
-        "la forêt tropicale se réduit" : "the rainforest is shrinking",
-        "reboiser" : "to reforest",
-        "le reboisement" : "reforestation",
+const themesWordsAnswers = {"Environnement" : {
+    "écologique, lié à l'environnement" : "environmental",
+    "une politique qui respecte l'environnement" : "an eco-friendly policy",
+    "protéger l'environnement" : "to protect the environnement",
+    "la protection de l'environnement" : "the preservation of the environment",
+    "la nature" : "nature",
+    "la protection de la nature" : "nature conservation",
+    "la faune et la flore" : "wildlife",
+    "un défenseur de l'environnement" : "a conservationist",
+    "un écologiste" : "an ecologist",
+    "un militant écologiste" : "a green activist",
+    "un écolo" : "a tree-hugger",
+    "un militan écologiste (mais l'autre version stylée)" : "an eco-warrior",
+    "sensibiliser les gens à un problème" : "to make people aware of a problem",
+    "une campagne de sensibilisation" : "an awareness campaign",
+    "un parc naturel" : "a natural reserve",
+    "le tourisme écologique" : "eco-tourism",
+    "détruire la biosphère" : "to destroy the biosphere",
+    "être / représenter une menace pour qch" : "to be / pose a threat to something",
+    "mettre en danger qch" : "to jeopardize something",
+    "mettre qch en danger" : "to put something at risk",
+    "être en danger" : "to be in danger",
+    "nuire à l'environnement" : "to harm the environnement",
+    "nocif" : "harmful",
+    "inoffensif" : "harmless",
+    "dégâts" : "damage",
+    "endommager qch" : "to damage something",
+    "causer des dégâts" : "to cause damage",
+    "se détériorer" : "to deteriorate",
+    "les ressources naturelles" : "natural resources",
+    "l'épuisement des ressources" : "the depletion of resources",
+    "la rareté" : "scarcity",
+    "les matières premières" : "raw materials",
+    "la biodiversité" : "biodiversity",
+    "l'habitat" : "habitat",
+    "une niche" : "a niche",
+    "une zone protégée" : "a conservation area",
+    "un écosystème" : "an ecosystem",
+    "une espèce" : "a species",
+    "une espèce animale" : "an animal species",
+    "une espèce végétale" : "a plant species",
+    "un mammifère" : "a mammal",
+    "le trafic d'animaux" : "animal trafficking",
+    "une espèce en voie de disparition" : "an endangered species",
+    "être menacé d'extinction" : "to be threatened with extinction",
+    "disparaître" : "to become extinct",
+    "la surpêche" : "overfishing",
+    "le thon rouge" : "bluefin tuna",
+    "un dauphin / une baleine" : "a dolphin / a whale",
+    "la pêche à la baleine" : "whaling",
+    "la couche d'ozone" : "the ozone layer",
+    "les rayons ultra-violets" : "ultra-violet rays",
+    "le trou dans la couche d'ozone" : "the hole the ozone layer",
+    "la diminution de la couche d'ozone" : "ozone depletion",
+    "les CFC" : "CFCs",
+    "respectueux de la couche d'ozone" : "ozone-friendly",
+    "une forêt tropicale" : "a tropical forest",
+    "le dévoloppement durable" : "sustainable development",
+    "abattre des arbres" : "to cut down trees",
+    "la déforestation" : "deforestation",
+    "l'exploitation du bois" : "logging",
+    "l'industrie du bois" : "the logging industry",
+    "la forêt tropicale se réduit" : "the rainforest is shrinking",
+    "reboiser" : "to reforest",
+    "le reboisement" : "reforestation",
     }
 }
 const themes = ["Environnement"]; //à remplacer par un getElementById
@@ -80,7 +79,7 @@ const wordDisplayed = document.getElementById("word");
 let wordRank = 0
 wordDisplayed.innerText = wordsAndAnswers[wordRank][0] + " :";
 const rankDisplayed = document.getElementsByClassName("rank")[0];
-rankDisplayed.innerText = "1/" + wordsAndAnswers.length
+rankDisplayed.innerText = "1/" + wordsAndAnswers.length;
 
 const resultsPanel = document.getElementsByClassName("results")[0];
 const scorePanel = document.getElementsByClassName("score")[0];
@@ -88,8 +87,8 @@ const gameContainer = document.getElementsByClassName("game-container")[0];
 const skipButton = document.getElementsByClassName("skip")[0];
 const skipButtonItself = document.getElementsByClassName("skipButton")[0];
 
-const correctSFX = new Audio("correct.wav")
-const wrongSFX = new Audio("wrong.wav")
+const correctSFX = new Audio("../sfx/correct.wav");
+const wrongSFX = new Audio("../sfx/wrong.wav");
 
 const inputs = document.querySelectorAll(".game-container input");
 
@@ -102,7 +101,7 @@ async function checkAnswer(e) {
     if (e.key === "Enter") {
         const input = e.target;
         const userAnswer = input.value;
-        if (wordsAndAnswers[wordRank][1] === userAnswer) {
+        if (wordsAndAnswers[wordRank][1] === userAnswer.toLowerCase()) {
             input.value = "";
             input.disabled = true;
             correctSFX.play();
